@@ -1,0 +1,37 @@
+prefork 2
+
+server "b243yoohdcpbkkjrjqpdpsca5b2cuux2s2je2vhdzjse77syx4mc6fid.onion" {
+	listen on 127.0.0.1 port 133
+	root "/tor_blog"
+}
+
+server "kysr.kaiserreich.online" {
+	default type text/plain
+	listen on 95.170.95.129 port 80
+	root "/kysr"
+	location "/exe/*" {
+		fastcgi
+	}
+}
+
+server "kaiserreich.online" {
+	alias "www.kaiserreich.online"
+	listen on 95.170.95.129 port 80
+	root "/kaiserreich.online"
+}
+
+
+
+
+
+types {
+	text/css		css
+	text/html		html 
+	text/plain		txt htm
+	image/gif		gif
+	image/jpeg		jpeg jpg
+	image/png		png
+	application/javascript	js
+	application/xml		xml
+	application/wasm	wasm
+}

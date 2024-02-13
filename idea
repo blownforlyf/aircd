@@ -1,0 +1,15 @@
+configurations ...
+
+bc
+bc + ws
+
+irc 
+
+irc + ws
+
+bc / irc + ws bridge
+
+ssl, almost a must with ws
+in irc?
+
+irc with nossl/ssl websocket/nowebsocket
